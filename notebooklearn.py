@@ -16,12 +16,12 @@ from pyspark.sql.types import *
 user_schema = StructType([ \
     StructField("date", StringType(), True),\
     StructField("videos_added", IntegerType(), True),\
-    StructField("average_views_per_viewer", IntegerType(), True),\
+    StructField("average_views_per_viewer", FloatType(), True),\
     StructField("subscribers", IntegerType(), True),\
     StructField("unique_viewers", IntegerType(), True),\
     StructField("views", IntegerType(), True),\
-    StructField("watch_time_hours", IntegerType(), True),\
-    StructField("average_duration", IntegerType(), True),])
+    StructField("watch_time_hours", FloatType(), True),\
+    StructField("average_duration", StringType(), True),])
 df = spark.read.schema(user_schema).option("header","true")\
     .csv(wasbs_path)
 df.createOrReplaceTempView('source')
@@ -30,10 +30,12 @@ df.createOrReplaceTempView('source')
 
 df.count()
 
+
+
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM source LIMIT 10
+# MAGIC SELECT * FROM source LIMIT 300
 
 # COMMAND ----------
 
