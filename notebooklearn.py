@@ -2,7 +2,7 @@
 blob_account_name = 'n1gzddb203learndl'
 blob_container_name = 'youtube'
 blob_relative_path = '/Tabledata.csv'
-blob_sas_token = '?sv=2021-06-08&ss=b&srt=co&sp=rwdlacyx&se=2022-09-10T06:49:50Z&st=2022-09-06T22:49:50Z&spr=https&sig=bKq43vBKCjZKLmZ4eP38IJeraJqXKF1OsnJL3JCCl0M%3D'
+blob_sas_token = 'sp=rc&st=2022-09-08T00:10:58Z&se=2022-09-11T08:10:58Z&spr=https&sv=2021-06-08&sr=c&sig=fb25vMnwNLsYydMWMTXsOwS05jlQkLjzrivoSet%2F1c0%3D'
 
 # COMMAND ----------
 
